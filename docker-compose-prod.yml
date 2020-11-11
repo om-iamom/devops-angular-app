@@ -1,0 +1,27 @@
+version: "3.7"
+
+
+
+services:
+
+    demo-angular-app-prod:
+
+  
+
+        container_name: demo-appcontainer-prod
+
+        build:
+
+            context: .
+
+            dockerfile: demo-app/dockerfile-prod
+
+        volumes:
+
+            - '.:/app'
+
+            - '/app/node_modules'
+
+        ports:
+
+            - '80:80'
